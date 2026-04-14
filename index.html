@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tullio Serci | Business Plan e Analisi di Fattibilità su Numeri Reali</title>
+  <meta name="description" content="Business plan professionali, analisi di fattibilità e valutazioni economico-finanziarie costruite su numeri reali. Oltre 20 anni di esperienza operativa come manager industriale e imprenditore." />
+  <meta name="keywords" content="business plan professionale, business plan per startup, business plan per banca, analisi di fattibilità business, consulente business plan, break even business plan, analisi costi ricavi, consulenza startup italia" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:      #0c1f3f;
+      --navy-mid:  #163060;
+      --accent:    #1e5cb3;
+      --accent-hl: #2d74d4;
+      --grey-dark: #374151;
+      --grey-mid:  #6b7280;
+      --grey-light:#f1f5f9;
+      --border:    #e2e8f0;
+      --white:     #ffffff;
+      --gold:      #c8a84b;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--white);
+      color: var(--grey-dark);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(12,31,63,0.97);
+      backdrop-filter: blur(8px);
+      padding: 0 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-brand {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--accent-hl) !important; color: var(--white) !important; }
+    .nav-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1a3f6f 100%);
+      color: var(--white);
+      padding: 96px 32px 80px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-inner {
+      max-width: 1060px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 64px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-text { flex: 1; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(200,168,75,0.18);
+      color: var(--gold);
+      border: 1px solid rgba(200,168,75,0.35);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.5vw, 52px);
+      font-weight: 800;
+      line-height: 1.13;
+      letter-spacing: -0.025em;
+      margin-bottom: 20px;
+    }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.8);
+      max-width: 560px;
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent);
+      color: var(--white);
+      padding: 14px 26px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 20px rgba(30,92,179,0.4);
+    }
+    .btn-primary:hover { background: var(--accent-hl); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent;
+      color: rgba(255,255,255,0.85);
+      padding: 14px 26px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.7); color: var(--white); }
+
+    .hero-photo-wrap {
+      flex: 0 0 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-photo {
+      width: 260px; height: 320px;
+      border-radius: 16px;
+      background: linear-gradient(145deg, #1e3a6e, #2d5598);
+      border: 3px solid rgba(255,255,255,0.12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 13px;
+      gap: 10px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .hero-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .photo-placeholder-icon {
+      width: 72px; height: 72px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .photo-placeholder-icon svg { opacity: 0.5; }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--grey-light);
+      padding: 28px 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-inner {
+      max-width: 1060px; margin: auto;
+      display: flex; gap: 0;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      flex: 1;
+      min-width: 160px;
+      text-align: center;
+      padding: 8px 16px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--grey-mid);
+      margin-top: 4px;
+    }
+
+    /* ── SHARED LAYOUT ── */
+    .section { padding: 80px 32px; }
+    .section-alt { background: var(--grey-light); }
+    .container { max-width: 1060px; margin: auto; }
+    .section-tag {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .section-lead {
+      font-size: 18px;
+      color: var(--grey-mid);
+      max-width: 620px;
+      margin-bottom: 48px;
+      line-height: 1.65;
+    }
+    .divider { width: 48px; height: 3px; background: var(--gold); border-radius: 2px; margin-bottom: 20px; }
+
+    /* ── CHI SONO ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .about-text p { margin-bottom: 18px; color: var(--grey-dark); }
+    .about-text strong { color: var(--navy); }
+    .about-highlights {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 36px;
+    }
+    .about-highlights h3 {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .highlight-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+    .highlight-item:last-child { margin-bottom: 0; }
+    .highlight-icon {
+      width: 36px; height: 36px;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+    }
+    .highlight-item-text { font-size: 14px; line-height: 1.55; color: rgba(255,255,255,0.85); }
+    .highlight-item-text strong { color: var(--white); display: block; margin-bottom: 2px; }
+
+    /* ── METODO ── */
+    .method-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .method-step {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 24px;
+      position: relative;
+      transition: box-shadow 0.2s;
+    }
+    .method-step:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+    .step-num {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+    }
+    .method-step h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .method-step p { font-size: 14px; color: var(--grey-mid); line-height: 1.6; }
+
+    /* ── SERVIZI ── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px 28px;
+      transition: box-shadow 0.25s, border-color 0.25s;
+    }
+    .service-card:hover {
+      box-shadow: 0 12px 40px rgba(12,31,63,0.1);
+      border-color: var(--accent);
+    }
+    .service-icon {
+      width: 48px; height: 48px;
+      background: rgba(30,92,179,0.1);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .service-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .service-card .for-who {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .service-card p { font-size: 14px; color: var(--grey-mid); line-height: 1.65; }
+
+    /* ── PER CHI ── */
+    .target-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .target-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 22px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .target-check {
+      width: 28px; height: 28px; flex-shrink: 0;
+      background: rgba(30,92,179,0.1);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .target-card h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .target-card p { font-size: 13px; color: var(--grey-mid); line-height: 1.55; }
+
+    /* ── DELIVERABLES ── */
+    .deliverables-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .deliverable-list { display: flex; flex-direction: column; gap: 16px; }
+    .deliverable-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .del-badge {
+      width: 36px; height: 36px; flex-shrink: 0;
+      border-radius: 8px;
+      background: var(--navy);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      letter-spacing: 0.02em;
+    }
+    .deliverable-item h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .deliverable-item p { font-size: 13px; color: var(--grey-mid); }
+    .deliverables-note {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 40px 36px;
+    }
+    .deliverables-note h3 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .deliverables-note p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 16px;
+      line-height: 1.65;
+    }
+    .deliverables-note .note-accent { color: var(--gold); font-weight: 700; }
+
+    /* ── PERCHÉ ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .why-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 30px 26px;
+      border-left: 4px solid var(--accent);
+    }
+    .why-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+    .why-card p { font-size: 14px; color: var(--grey-mid); line-height: 1.65; }
+
+    /* ── PRIMA DI ORDINARE ── */
+    .preorder-box {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      border-radius: 20px;
+      padding: 56px 52px;
+      color: var(--white);
+      display: flex;
+      gap: 56px;
+      align-items: center;
+    }
+    .preorder-text { flex: 1; }
+    .preorder-text h2 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .preorder-text p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+    .preorder-text p:last-of-type { margin-bottom: 0; }
+    .preorder-icon {
+      flex: 0 0 120px;
+      font-size: 80px;
+      text-align: center;
+      opacity: 0.7;
+    }
+
+    /* ── CONTATTO ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .contact-info h2 {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+    .contact-info p { font-size: 16px; color: var(--grey-mid); margin-bottom: 32px; line-height: 1.7; }
+    .contact-detail {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    .contact-detail-icon {
+      width: 40px; height: 40px;
+      background: rgba(30,92,179,0.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .contact-detail a { color: var(--navy); font-weight: 600; text-decoration: none; }
+    .contact-detail a:hover { color: var(--accent); }
+    .contact-form-wrap {
+      background: var(--grey-light);
+      border-radius: 16px;
+      padding: 36px;
+    }
+    .contact-form-wrap h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1 / -1; }
+    label { font-size: 13px; font-weight: 600; color: var(--grey-dark); }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: 'Inter', Arial, sans-serif;
+      color: var(--grey-dark);
+      background: var(--white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--accent); }
+    textarea { min-height: 120px; resize: vertical; }
+    .btn-submit {
+      width: 100%;
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: 'Inter', Arial, sans-serif;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+    .btn-submit:hover { background: var(--accent-hl); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.6);
+      padding: 36px 32px;
+    }
+    .footer-inner {
+      max-width: 1060px; margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-brand { color: var(--white); font-weight: 700; font-size: 15px; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { font-size: 12px; width: 100%; text-align: center; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+
+      .hero { padding: 64px 20px 56px; }
+      .hero-inner { flex-direction: column; gap: 40px; }
+      .hero-photo-wrap { flex: none; width: 100%; align-items: center; }
+      .hero-photo { width: 200px; height: 250px; }
+
+      .about-grid,
+      .deliverables-wrap,
+      .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+
+      .preorder-box { flex-direction: column; gap: 24px; padding: 36px 28px; }
+      .preorder-icon { font-size: 56px; flex: none; }
+
+      .section { padding: 56px 20px; }
+      .stats-bar { padding: 20px; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding: 12px 8px; }
+      .stat-item:last-child { border-bottom: none; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 26px; }
+      .hero-actions { flex-direction: column; }
+      .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">Tullio Serci</a>
+  <ul class="nav-links">
+    <li><a href="#about">Chi sono</a></li>
+    <li><a href="#method">Metodo</a></li>
+    <li><a href="#services">Servizi</a></li>
+    <li><a href="#deliverables">Cosa ottieni</a></li>
+    <li><a href="#contact" class="nav-cta">Richiedi una valutazione</a></li>
+  </ul>
+  <div class="nav-toggle" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">Program Manager · Industrial Business Advisor · Imprenditore</div>
+      <h1>Business plan costruiti<br>sui <em>numeri reali</em>,<br>non sui modelli standard.</h1>
+      <p class="hero-sub">Oltre 20 anni di esperienza operativa come manager industriale e imprenditore. Analizzo la sostenibilità economica del tuo progetto con rigore, prima che tu investa. Lavoro in italiano e in inglese.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+          Richiedi una valutazione gratuita
+        </a>
+        <a href="#services" class="btn-secondary">
+          Scopri i servizi
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo">
+        <picture>
+          <source srcset="tullio-serci.webp" type="image/webp">
+          <img src="tullio-serci.jpg" alt="Tullio Serci – Program Manager e Business Advisor" width="600" height="800" loading="eager">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">20+</div>
+      <div class="stat-label">Anni di esperienza operativa</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">EU &amp; MA</div>
+      <div class="stat-label">Progetti industriali internazionali</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">–14%</div>
+      <div class="stat-label">CAPEX ottimizzato su target reale</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">€420K</div>
+      <div class="stat-label">Risparmio annuo da rinegoziazione</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">IT · EN</div>
+      <div class="stat-label">Deliverable in italiano e inglese</div>
+    </div>
+  </div>
+</div>
+
+<!-- CHI SONO -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-tag">Chi sono</div>
+        <div class="divider"></div>
+        <h2 class="section-title">Esperienza operativa, non consulenza teorica.</h2>
+        <p>Ho lavorato per oltre vent'anni come <strong>Program Manager e Industrial Manager</strong> su progetti complessi: avvii di stabilimento, investimenti CAPEX, ristrutturazioni operative, negoziazioni con fornitori e istituzioni. Ho vissuto dall'interno la pressione dei numeri, delle scadenze e delle decisioni irreversibili.</p>
+        <p>Parallelamente, ho sviluppato un'esperienza concreta come <strong>imprenditore</strong>: ho costruito e gestito business reali, ho visto da vicino come le assunzioni ottimistiche su carta si scontrino con i costi reali del mercato, con la struttura dei ricavi, con la gestione del cash flow.</p>
+        <p>Questo mi ha insegnato una cosa che nessun template insegna: <strong>un business plan deve essere uno strumento per decidere, non un documento per impressionare.</strong></p>
+        <p>Se i tuoi numeri non reggono, te lo dico. Se le tue assunzioni sono fragili, le metto in discussione. Se il progetto ha un potenziale reale, costruiamo insieme le basi credibili per dimostrarlo.</p>
+      </div>
+      <div class="about-highlights">
+        <h3>Profilo in sintesi</h3>
+        <div class="highlight-item">
+          <div class="highlight-icon">🏭</div>
+          <div class="highlight-item-text">
+            <strong>Manager industriale</strong>
+            Avvii di impianto, CAPEX, supply chain, project management su scala EU/Africa
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">💼</div>
+          <div class="highlight-item-text">
+            <strong>Imprenditore operativo</strong>
+            Esperienza diretta nella gestione di business reali: costi, ricavi, cash flow, decisioni critiche
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">📊</div>
+          <div class="highlight-item-text">
+            <strong>Analisi economico-finanziaria</strong>
+            Break-even, scenari, proiezioni, valutazione della sostenibilità prima dell'investimento
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🌍</div>
+          <div class="highlight-item-text">
+            <strong>Esperienza internazionale</strong>
+            Progetti in Europa e Marocco. Deliverable in italiano e in inglese
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COME LAVORO -->
+<section class="section section-alt" id="method">
+  <div class="container">
+    <div class="section-tag">Come lavoro</div>
+    <div class="divider"></div>
+    <h2 class="section-title">Un metodo rigoroso, non una compilazione.</h2>
+    <p class="section-lead">Non lavoro con template precompilati che cambiano solo il nome dell'azienda. Ogni analisi parte dai dati specifici del tuo progetto.</p>
+    <div class="method-steps">
+      <div class="method-step">
+        <div class="step-num">01 — ASCOLTO</div>
+        <h3>Capisco il tuo progetto</h3>
+        <p>Prima di qualsiasi numero, voglio capire l'idea, il contesto di mercato, le risorse disponibili e gli obiettivi reali. Faccio domande precise, non generiche.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-num">02 — DATI</div>
+        <h3>Raccolta e verifica delle ipotesi</h3>
+        <p>Identifico i dati necessari e verifico la loro solidità. Se mancano dati critici, lo segnalo esplicitamente. Non costruisco proiezioni su basi inconsistenti.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-num">03 — ANALISI</div>
+        <h3>Challenge delle assunzioni</h3>
+        <p>Le assunzioni ottimistiche sono il problema più comune. Metto in discussione ogni ipotesi che non sia supportata da dati reali o da benchmark di mercato credibili.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-num">04 — SCENARI</div>
+        <h3>Costruzione di scenari realistici</h3>
+        <p>Sviluppo scenari base, pessimistico e ottimistico con le relative sensibilità. L'obiettivo è capire i confini di sostenibilità del progetto, non presentare un solo scenario conveniente.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-num">05 — OUTPUT</div>
+        <h3>Documento chiaro e utilizzabile</h3>
+        <p>Il risultato finale è un documento strutturato, leggibile, professionale. Adatto a essere presentato a una banca, un investitore o usato internamente per decidere.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-num">06 — ONESTÀ</div>
+        <h3>Se non regge, lo dico</h3>
+        <p>Se un'idea non ha basi economiche solide, non abbellisco i numeri. Propongo scenari correttivi realizzabili oppure indico chiaramente quali condizioni devono cambiare per rendere il progetto sostenibile.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIZI -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-tag">Servizi</div>
+    <div class="divider"></div>
+    <h2 class="section-title">Cosa posso fare per il tuo progetto.</h2>
+    <p class="section-lead">Ogni servizio è pensato per aiutarti a prendere decisioni migliori, non per produrre documentazione fine a sé stessa.</p>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <div class="for-who">Startup · PMI · Nuove attività</div>
+        <h3>Business Plan Professionale</h3>
+        <p>Costruzione completa di un business plan basato su dati reali: analisi del mercato, struttura dei costi, proiezioni di ricavo, piano finanziario, break-even e valutazione della sostenibilità. Nessun template: ogni piano è costruito sul tuo progetto specifico.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🔍</div>
+        <div class="for-who">Prima dell'investimento</div>
+        <h3>Analisi di Fattibilità Economica</h3>
+        <p>Analisi pre-investimento per capire se un'idea regge davvero sui numeri. Verifica delle assunzioni, calcolo del punto di pareggio, stima del fabbisogno finanziario e valutazione dei principali rischi economici prima di impegnare risorse.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏦</div>
+        <div class="for-who">Banche · Investitori · Soci</div>
+        <h3>Documentazione per Banche e Investitori</h3>
+        <p>Preparazione di business plan e analisi finanziarie strutturate per presentazioni bancarie, richieste di finanziamento, pitch con investitori o accordi tra soci. Formato professionale, dati verificati, narrative credibili.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📉</div>
+        <div class="for-who">Imprenditori · Manager</div>
+        <h3>Analisi Costi / Ricavi e Break-Even</h3>
+        <p>Analisi dettagliata della struttura dei costi fissi e variabili, del margine di contribuzione, del punto di pareggio operativo e finanziario. Fondamentale per capire a che volumi il progetto diventa sostenibile.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⚠️</div>
+        <div class="for-who">Chi ha già un business plan</div>
+        <h3>Revisione Critica di Business Plan</h3>
+        <p>Analisi indipendente di un business plan già redatto. Identifico assunzioni fragili, errori logici, numeri incoerenti o ottimismi non supportati. Fornisco un report dettagliato con le criticità e le proposte correttive.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎯</div>
+        <div class="for-who">Progetto complesso · CAPEX · M&amp;A</div>
+        <h3>Supporto Decisionale su Investimenti</h3>
+        <p>Affiancamento su decisioni di investimento rilevanti: analisi costi-benefici, valutazioni comparative tra scenari, due diligence economica di base, supporto alla strutturazione dell'offerta e alla negoziazione.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PER CHI -->
+<section class="section section-alt" id="target">
+  <div class="container">
+    <div class="section-tag">Per chi è questo servizio</div>
+    <div class="divider"></div>
+    <h2 class="section-title">Se ti riconosci in uno di questi profili, posso aiutarti.</h2>
+    <div class="target-grid" style="margin-top:8px;">
+      <div class="target-card">
+        <div class="target-check">✓</div>
+        <div>
+          <h4>Hai un'idea e vuoi capire se regge</h4>
+          <p>Prima di investire tempo e denaro, vuoi sapere se i numeri sostengono davvero il tuo progetto.</p>
+        </div>
+      </div>
+      <div class="target-card">
+        <div class="target-check">✓</div>
+        <div>
+          <h4>Devi presentare un piano a una banca</h4>
+          <p>Hai bisogno di un business plan credibile, professionale e correttamente strutturato per una richiesta di finanziamento.</p>
+        </div>
+      </div>
+      <div class="target-card">
+        <div class="target-check">✓</div>
+        <div>
+          <h4>Cerchi un investitore o un socio</h4>
+          <p>Devi presentare il tuo progetto in modo convincente, con numeri solidi e una narrativa economica credibile.</p>
+        </div>
+      </div>
+      <div class="target-card">
+        <div class="target-check">✓</div>
+        <div>
+          <h4>Hai già un business plan ma vuoi una seconda opinione</h4>
+          <p>Vuoi sapere se i numeri reggono un'analisi critica prima di mostrarli a qualcuno di importante.</p>
+        </div>
+      </div>
+      <div class="target-card">
+        <div class="target-check">✓</div>
+        <div>
+          <h4>Sei una PMI con un progetto di espansione</h4>
+          <p>Stai valutando un investimento significativo e vuoi un'analisi economica seria prima di decidere.</p>
+        </div>
+      </div>
+      <div class="target-card">
+        <div class="target-check">✓</div>
+        <div>
+          <h4>Non vuoi un documento estetico, ma uno strumento utile</h4>
+          <p>Sai già che un business plan bello ma vuoto non serve a niente. Cerchi qualcuno che ragioni davvero sui dati.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COSA OTTIENI -->
+<section class="section" id="deliverables">
+  <div class="container">
+    <div class="deliverables-wrap">
+      <div>
+        <div class="section-tag">Cosa ottieni</div>
+        <div class="divider"></div>
+        <h2 class="section-title">Deliverable chiari, professionali e utilizzabili.</h2>
+        <p style="color:var(--grey-mid); margin-bottom:28px;">Ogni analisi si conclude con un documento strutturato, pronto per essere presentato o usato per decidere. Non bozze, non slide generiche: documenti con numeri verificati.</p>
+        <div class="deliverable-list">
+          <div class="deliverable-item">
+            <div class="del-badge">01</div>
+            <div>
+              <h4>Executive Summary</h4>
+              <p>Sintesi strategica del progetto, del mercato di riferimento e della proposta di valore. Comprensibile anche per chi legge velocemente.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="del-badge">02</div>
+            <div>
+              <h4>Analisi costi e ricavi dettagliata</h4>
+              <p>Struttura completa di costi fissi, variabili, margini e ricavi attesi per scenario. Con le assunzioni esplicitate e verificabili.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="del-badge">03</div>
+            <div>
+              <h4>Calcolo del break-even</h4>
+              <p>Punto di pareggio operativo e finanziario. Quanto devi vendere per coprire i costi. Quanto tempo ci vuole per raggiungere la sostenibilità.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="del-badge">04</div>
+            <div>
+              <h4>Proiezioni finanziarie su 3–5 anni</h4>
+              <p>P&amp;L previsionale, cash flow, fabbisogno finanziario e principali KPI economici per i principali scenari di sviluppo.</p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="del-badge">05</div>
+            <div>
+              <h4>Documento finale in PDF professionale</h4>
+              <p>Output finale strutturato, leggibile e presentabile a banche, investitori o per uso decisionale interno. Disponibile in italiano o in inglese.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="deliverables-note">
+        <h3>Il documento deve essere utile, non solo presentabile.</h3>
+        <p>Un business plan scritto bene ma costruito su ipotesi fragili è peggio di nessun business plan: ti dà una falsa sicurezza.</p>
+        <p>Il mio obiettivo non è produrre un documento che soddisfi formalmente una richiesta. È costruire un'analisi che tu possa realmente usare per decidere: investire, non investire, correggere il modello, chiedere finanziamento con basi solide.</p>
+        <p class="note-accent">Se i numeri non reggono, preferisco dirtelo prima.</p>
+        <p>Non è sconfortante: è la differenza tra chi ti vende un template e chi ragiona con te sul progetto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERCHÉ -->
+<section class="section section-alt" id="why">
+  <div class="container">
+    <div class="section-tag">Perché lavorare con me</div>
+    <div class="divider"></div>
+    <h2 class="section-title">Quello che mi differenzia dai consulenti standard.</h2>
+    <p class="section-lead">Non vendo template. Ragiono sui tuoi numeri specifici con oltre 20 anni di esperienza operativa alle spalle.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Esperienza operativa, non accademica</h3>
+        <p>Ho gestito budget milionari, avviato stabilimenti, negoziato contratti complessi. So come funzionano i numeri nella realtà, non solo sui fogli di calcolo. Quella prospettiva entra in ogni analisi che produco.</p>
+      </div>
+      <div class="why-card">
+        <h3>Controllo rigoroso delle assunzioni</h3>
+        <p>Le assunzioni ottimistiche non verificate sono la principale causa di fallimento dei business plan. Ogni ipotesi che uso deve essere giustificata, o viene corretta con dati di mercato credibili.</p>
+      </div>
+      <div class="why-card">
+        <h3>Nessun template generico</h3>
+        <p>Non esiste un modello valido per tutti i settori e tutte le dimensioni aziendali. Ogni analisi che produco parte da zero sui dati specifici del progetto. Il risultato è diverso perché il progetto è diverso.</p>
+      </div>
+      <div class="why-card">
+        <h3>Onestà intellettuale, anche quando non è comoda</h3>
+        <p>Se un'idea non reggge, lo dico in modo chiaro e propongo le condizioni che dovrebbero cambiare. Non abbellisco i dati per non deludere il cliente. Questo è il valore reale del servizio.</p>
+      </div>
+      <div class="why-card">
+        <h3>Soluzioni, non solo analisi</h3>
+        <p>Quando identifico un problema — costi troppo alti, ricavi insufficienti, struttura finanziaria fragile — non mi limito a segnalarlo. Propongo scenari alternativi e correzioni concrete, quando possibile.</p>
+      </div>
+      <div class="why-card">
+        <h3>Documento professionale e presentabile</h3>
+        <p>Il risultato finale è un documento strutturato, credibile e leggibile. Adatto a essere usato con banche, investitori o internamente per il processo decisionale. Non una bozza da rifinire.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIMA DI ORDINARE -->
+<section class="section" id="preorder">
+  <div class="container">
+    <div class="preorder-box">
+      <div class="preorder-icon">💬</div>
+      <div class="preorder-text">
+        <h2>Prima di iniziare, parliamoci.</h2>
+        <p>Inviami una breve descrizione della tua idea o del tuo progetto: settore, stadio di sviluppo, obiettivo principale (banca, investitore, decisione interna). Ci vogliono pochi minuti.</p>
+        <p>In questo modo posso capire qual è il tipo di analisi più adatto alla tua situazione, stimare correttamente il perimetro di lavoro e evitare di partire in direzione sbagliata. Non è un passaggio burocratico: è il modo in cui lavoro bene.</p>
+        <p>Questo filtra le richieste generiche e garantisce che il tempo che dedichiamo insieme sia realmente utile per te.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTO -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-tag">Contatti</div>
+        <div class="divider"></div>
+        <h2>Raccontami la tua idea.<br>Ti dico se ha basi solide.</h2>
+        <p>Se stai valutando un progetto e vuoi un'analisi economica seria prima di investire, questo è il posto giusto. Inviami un messaggio con una breve descrizione: ti rispondo entro 24 ore.</p>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📧</div>
+          <div>
+            <div style="font-size:12px;color:var(--grey-mid);margin-bottom:2px;">Email</div>
+            <a href="mailto:tullio@tullioserci.srl">tullio@tullioserci.srl</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🔗</div>
+          <div>
+            <div style="font-size:12px;color:var(--grey-mid);margin-bottom:2px;">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/tullio-serci-consulting/" target="_blank" rel="noopener">linkedin.com/in/tullio-serci-consulting</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🛒</div>
+          <div>
+            <div style="font-size:12px;color:var(--grey-mid);margin-bottom:2px;">Fiverr</div>
+            <a href="#" target="_blank" rel="noopener">Business Plan su Fiverr</a>
+          </div>
+        </div>
+        <p style="font-size:13px; color:var(--grey-mid); margin-top:24px; line-height:1.6;">
+          Ricevo richieste da tutta Italia e lavoro anche con clienti internazionali.<br>
+          <strong style="color:var(--navy)">Deliverable disponibili in italiano e in inglese.</strong>
+        </p>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h3>Scrivi qui la tua idea o il tuo progetto</h3>
+        <form action="https://formspree.io/f/xnjlnjzz" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nome *</label>
+              <input type="text" id="name" name="name" placeholder="Mario Rossi" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="mario@email.it" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full">
+              <label for="service">Servizio di interesse <span style="font-weight:400;color:var(--grey-mid)">(opzionale)</span></label>
+              <select id="service" name="service">
+                <option value="">— Seleziona —</option>
+                <option>Business Plan professionale</option>
+                <option>Analisi di fattibilità</option>
+                <option>Documentazione per banca/investitore</option>
+                <option>Revisione critica di un business plan</option>
+                <option>Analisi costi/ricavi e break-even</option>
+                <option>Supporto decisionale su investimento</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full">
+              <label for="message">Descrivi brevemente l'idea o il progetto *</label>
+              <textarea id="message" name="message" placeholder="Settore di attività, stadio del progetto, obiettivo principale (banca, investitore, analisi interna)..." required></textarea>
+            </div>
+          </div>
+          <div class="form-group full" style="margin-bottom:16px;">
+            <label style="display:flex;align-items:flex-start;gap:10px;font-weight:400;cursor:pointer;">
+              <input type="checkbox" name="consenso_privacy" id="consenso_privacy" required
+                style="width:18px;height:18px;flex-shrink:0;margin-top:2px;accent-color:var(--accent);" />
+              <span style="font-size:13px;color:var(--grey-mid);line-height:1.5;">
+                Ho letto la <a href="privacy.html" target="_blank" style="color:var(--accent);font-weight:600;">Privacy Policy</a>
+                e acconsento al trattamento dei miei dati personali (nome, email, messaggio) da parte di Tullio Serci,
+                esclusivamente per ricevere risposta alla presente richiesta. *
+              </span>
+            </label>
+          </div>
+          <button type="submit" class="btn-submit">Invia la richiesta →</button>
+          <p style="font-size:12px;color:var(--grey-mid);text-align:center;margin-top:12px;line-height:1.6;">
+            Rispondo entro 24 ore lavorative. Nessuno spam.<br>
+            I tuoi dati non vengono ceduti a terzi né usati per finalità di marketing.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Tullio Serci</div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#about">Chi sono</a>
+      <a href="#method">Metodo</a>
+      <a href="#services">Servizi</a>
+      <a href="#deliverables">Cosa ottieni</a>
+      <a href="#contact">Contatti</a>
+    </nav>
+  </div>
+  <div class="footer-inner footer-copy">
+    <p>© 2024 Tullio Serci – Program Manager · Industrial Business Advisor · Imprenditore &nbsp;|&nbsp; Business plan su numeri reali, non su modelli generici.</p>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  function toggleNav() {
+    const links = document.querySelector('.nav-links');
+    if (links.style.display === 'flex') {
+      links.style.display = 'none';
+    } else {
+      links.style.display = 'flex';
+      links.style.flexDirection = 'column';
+      links.style.position = 'absolute';
+      links.style.top = '64px';
+      links.style.left = '0';
+      links.style.right = '0';
+      links.style.background = 'rgba(12,31,63,0.98)';
+      links.style.padding = '16px 24px 24px';
+      links.style.gap = '4px';
+    }
+  }
+
+  // Close mobile menu on link click
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      const links = document.querySelector('.nav-links');
+      links.style.display = 'none';
+    });
+  });
+</script>
+
+</body>
+</html>
